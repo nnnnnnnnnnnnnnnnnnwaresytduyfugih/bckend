@@ -1,0 +1,16 @@
+# render.yaml
+services:
+  - type: web
+    name: earnchain-api # Or whatever you want to call the backend service
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app/main.py
+    envVars:
+      - key: PYTHON_VERSION # Explicitly set Python version if needed
+        value: 3.11.11 # Or your preferred compatible version
+      - key: PORT
+        value: 10000 # Default Render port, or use $PORT in your app
+      - key: ADMIN_USER_ID
+        value: 7746836233 # Your Telegram User ID for admin
+      # Add other necessary env vars here or manage them in the Dashboard
