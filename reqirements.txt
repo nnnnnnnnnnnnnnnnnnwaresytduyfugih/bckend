@@ -1,0 +1,5 @@
+Flask==2.3.2
+python-telegram-bot==20.4
+python-dotenv==1.0.0
+flask-cors==4.0.0 # <-- Add this line
+# Add any other specific dependencies your database.py or models.py require
